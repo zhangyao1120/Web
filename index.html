@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>魅力赵州</title>
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/index.css">
+</head>
+<style>
+
+</style>
+
+<body>
+	<div class="header">
+		<div class="header-top">
+			<div class="container clear">
+				<ul class="herder-info clear">
+					<li class="iphone"><a href="#">移动客户端</a></li>
+				</ul>
+				<a href="javascript:openLogin();">微信</a>
+				<div id=win
+					style="display:none; POSITION:absolute; left:50%; top:50%; width:600px; height:400px; margin-left:-300px; margin-top:-200px; border:1px solid #888; background-color:white; text-align:center">
+					扫描下方二维码关注我们<br><img src="images/sm.png" alt="" id="sm"><br><a href="javascript:closeLogin();">关闭</a>
+				</div>
+			</div>
+		</div>
+		<div class="container header-bottom clear">
+			<img src="images/logo.png" alt="logo图" class="logo fl clear">
+			<div class="motai" id="mo">
+				<span class="close" id="close">×</span>
+				<img class="motaiimg" id="moimg">
+				<div id="caption"></div>
+			</div>
+			<ul class="nav fl clear">
+				<li class="first"><a href="#">传统赵州</a></li>
+				<li><a href="#">文化赵州</a></li>
+				<li><a href="#">特色赵州</a></li>
+				<li><a href="#">活动公告</a></li>
+				<li><a href="#">出行锦囊</a></li>
+				<li class="last"><a href="#">关于我们</a></li>
+			</ul>
+			<form class="form clear fr">
+				<input type="text" placeholder="请输入搜索关键字" class="search">
+				<input type="button" class="submit">
+			</form>
+		</div>
+	</div>
+	<div class="banner">
+		<ul>
+			<li class="banner-item">
+				<img src="images/5.jpg" alt="赵州名胜" class="text">
+			</li>
+		</ul>
+	</div>
+	<div class="wrap">
+		<div class="title">
+			<span>魅力赵州</span>
+		</div>
+		<ul class="three clear">
+			<li>
+				<div>
+					<img src="images/7.jpg" alt="" class="brige">
+				</div>
+				<h3>赵州桥</h3>
+				<p class="three-text">天下第一桥，是迄今世界上现存最古老的石拱桥。</p>
+				<div class="more">
+					<span>
+						<a href="#">了解更多</a>
+					</span>
+				</div>
+			</li>
+			<li class="two">
+				<div>
+					<img src="images/3.jpg" alt="" class="temple">
+				</div>
+				<h3>柏林禅寺</h3>
+				<p class="three-text">千年古刹——柏林禅寺，与赵州桥遥遥相望。</p>
+				<div class="more">
+					<span><a href="#">了解更多</a></span>
+				</div>
+			</li>
+			<li>
+				<div>
+					<img src="images/8.jpg" alt="" class="tower">
+				</div>
+				<h3>陀罗尼经幢</h3>
+				<p class="three-text">华夏第一塔——陀罗尼经幢，巍然独具风采。</p>
+				<div class="more">
+					<span class="more-three"><a href="#">了解更多</a></span>
+				</div>
+			</li>
+		</ul>
+	</div>
+	<div class="wrap">
+		<div class="title">
+			<span>出行锦囊</span>
+		</div>
+		<ul class="icon-list clear">
+			<li>
+				<img src="images/13.png" alt="" onclick="" class="icon-list-1" onmouseover="bigger1()"
+					onmouseout="smaller1()" style="cursor:pointer;">
+				<p class="five"><a href="#">游记攻略</a></p>
+			</li>
+			<li>
+				<img src="images/14.png" alt="" onclick="" class="icon-list-2" onmouseover="bigger2()"
+					onmouseout="smaller2()" style="cursor:pointer;">
+				<p class="five"><a href="#">票务信息</a></p>
+			</li>
+			<li>
+				<img src="images/15.png" alt="" onclick="" class="icon-list-3" onmouseover="bigger3()"
+					onmouseout="smaller3()" style="cursor:pointer;">
+				<p class="five"><a href="#">常用电话</a></p>
+			</li>
+			<li>
+				<img src="images/16.png" alt="" onclick="" class="icon-list-4" onmouseover="bigger4()"
+					onmouseout="smaller4()" style="cursor:pointer;">
+				<p class="five"><a href="#">景区交通</a></p>
+			</li>
+			<li>
+				<img src="images/17.png" alt="" onclick="" class="icon-list-5" onmouseover="bigger5()"
+					onmouseout="smaller5()" style="cursor:pointer;">
+				<p class="five"><a href="#">周边交通</a></p>
+			</li>
+		</ul>
+	</div>
+	<div class="bottom">
+		<div class="block">
+			<ul class="addr clear fl">
+				<li class="icon-addr">
+					<strong>联系地址</strong>
+					河北省石家庄赵县
+				</li>
+				<li class="icon-tel">
+					<strong>联系电话</strong>
+					123456789
+				</li>
+				<li class="song">
+					魅力赵州/风景园区
+					<br>
+					赵州旅游局
+				</li>
+			</ul>
+			<span class="end ">
+				<p class="end-1">CopyRight© 2015-2016 Llsly.com All Rights reserved.&nbsp;&nbsp;备案/许可证号:
+					冀ICP备15010124号-1</p>
+				<p class="end-2">承办方：赵县旅游局</p>
+				<br>
+			</span>
+		</div>
+	</div>
+	<div id="top" class="up" onclick="goTop()">回到顶部</div>
+</body>
+
+<script>
+	//大图滚动
+	var text = document.getElementsByClassName("text");
+	var btt = document.getElementById("back-to-top");
+
+	text[0].style.marginLeft = "0";
+	var intervalId = setInterval(function () {
+		var marginLeft = parseInt(text[0].style.marginLeft);
+		if (marginLeft == 1200) {
+			text[0].style.marginLeft = "0";
+			marginLeft = "0";
+		}
+		text[0].style.marginLeft = (marginLeft + 1) + "px";
+	}, 10)
+
+	//返回顶部
+	function goTop() {
+		var odiv = document.getElementById("top");
+		document.documentElement.scrollTop = document.body.scrollTop = 0;
+	}
+	window.onscroll = function () {
+		var odiv = document.getElementById("top");
+		var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+
+		if (scrollTop > 700) {
+			odiv.style.display = "block";
+		} else {
+			odiv.style.display = "block";
+		}
+	}
+
+	//点击“微信” 弹出二维码提示框
+	var wx = document.getElementById("weixin");
+	function openLogin() {
+		document.getElementById("win").style.display = "";
+	}
+	function closeLogin() {
+		document.getElementById("win").style.display = "none";
+	}
+
+	//将鼠标放在“出行锦囊”栏目的五个小图上，图片变大
+	var img1 = document.getElementsByClassName("icon-list-1");
+	var img2 = document.getElementsByClassName("icon-list-2");
+	var img3 = document.getElementsByClassName("icon-list-3");
+	var img4 = document.getElementsByClassName("icon-list-4");
+	var img5 = document.getElementsByClassName("icon-list-5");
+	function bigger1() {
+		img1[0].style.width = "200px";
+		img1[0].style.height = "200px";
+	}
+	function smaller1() {
+		img1[0].style.width = "80px";
+		img1[0].style.height = "80px";
+	}
+	function bigger2() {
+		img2[0].style.width = "200px";
+		img2[0].style.height = "200px";
+	}
+	function smaller2() {
+		img2[0].style.width = "80px";
+		img2[0].style.height = "80px";
+	}
+	function bigger3() {
+		img3[0].style.width = "200px";
+		img3[0].style.height = "200px";
+	}
+	function smaller3() {
+		img3[0].style.width = "80px";
+		img3[0].style.height = "80px";
+	}
+	function bigger4() {
+		img4[0].style.width = "200px";
+		img4[0].style.height = "200px";
+	}
+	function smaller4() {
+		img4[0].style.width = "80px";
+		img4[0].style.height = "80px";
+	}
+	function bigger5() {
+		img5[0].style.width = "200px";
+		img5[0].style.height = "200px";
+	}
+	function smaller5() {
+		img5[0].style.width = "80px";
+		img5[0].style.height = "80px";
+	}
+
+	//点击导航栏左侧logo图，弹出大图
+	var motai = document.getElementById('mo');
+	var moimg = document.getElementById("moimg");
+	var realimg = document.getElementsByClassName("logo");
+	var caption = document.getElementById("caption");
+	realimg[0].onclick = function () {
+		motai.style.display = "block";
+		moimg.src = this.src;
+		caption.innerHTML = this.alt;
+	}
+	var span = document.getElementById("close");
+	span.onclick = function () {
+		motai.style.display = "none";
+	}
+
+</script>
+
+</html>
